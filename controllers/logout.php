@@ -1,5 +1,4 @@
 <?php
-unset($_SESSION['login']);
 unset($_SESSION['user_id']);
 
-header('Location: /'. $previousLocation);
+header('Location: ' . (preg_match('/^\/user/', $previousLocation) ? '/home' : $previousLocation));

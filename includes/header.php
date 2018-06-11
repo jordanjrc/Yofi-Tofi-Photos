@@ -25,7 +25,7 @@
         <li>
           <a href="/contact" id="<?= ($resquestedPage === "contact" ? "current-link" : " ") ?>">Contact</a>
         </li>
-        <? if (isset($_SESSION['login'])) { ?>
+        <? if (isset($_SESSION['user_id'])) { ?>
         <li>
           <a href="/user/dashboard" id="<?= ($resquestedPage === "user/dashboard" ? "current-link" : " ") ?>">Dashboard</a>
         </li>

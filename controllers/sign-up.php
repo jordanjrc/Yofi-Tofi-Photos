@@ -77,10 +77,8 @@ if (!empty($_POST['email'])) {
   $insertStatement->bindValue(':password', $postValues->password);
   $insertStatement->execute();
 
-  $user_id = $insertStatement->fetchColumn();
-
-  $_SESSION['login'] = true;
-  $_SESSION['user_id'] = $user_id;
+  $userId = $insertStatement->fetchColumn();
+  $_SESSION['user_id'] = $userId;
 
   header('Location: /user/dashboard');
 }

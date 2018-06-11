@@ -23,7 +23,6 @@ if (isset($_POST['token'])) {
       $setResolved->bindValue(':token', $token);
       $setResolved->execute();
 
-      $_SESSION['login'] = true;
       $_SESSION['user_id'] = $results->user_id;
 
       header('Location: /user/dashboard');

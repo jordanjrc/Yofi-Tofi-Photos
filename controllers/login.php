@@ -15,9 +15,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
   if (!empty($results)) {
     if (password_verify($password, $results->password)) {
-      $_SESSION['login'] = true;
       $_SESSION['user_id'] = $results->id;
-
       header('Location: /user/dashboard');
     } else {
       $passwordErrorMessage = 'incorrect password';

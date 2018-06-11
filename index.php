@@ -18,10 +18,10 @@ $controller = 'controllers/' . $resquestedPage . '.php';
 $errorPage = 'views/error.php';
 
 $referer = @$_SERVER['HTTP_REFERER'];
-$previousLocation = basename($referer);
+$previousLocation = parse_url($referer, PHP_URL_PATH);
 
-if ((strpos($resquestedPage, 'user/') !== false) || (strpos($referer, 'user/') !== false)) {
-  if (!isset($_SESSION['login'])) {
+if (preg_match('/^user/', $resquestedPage)) {
+  if (!isset($_SESSION['user_id'])) {
     header('Location: /login');
   }
 }
