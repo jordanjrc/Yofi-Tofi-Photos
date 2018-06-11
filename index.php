@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('configuration.php');
+require('configuration.php');
 
 $resquestedPage = trim($_SERVER['REQUEST_URI'], '/');
 $resquestedPage = strtok($resquestedPage, '?');
