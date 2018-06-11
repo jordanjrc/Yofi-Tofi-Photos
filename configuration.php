@@ -12,12 +12,12 @@ if (empty($configuration)) {
 }
 
 try {
-$database = new PDO($configuration->dsn, $configuration->database_username, $configuration->database_password, array(
+  $database = new PDO($configuration->dsn, $configuration->database_username, $configuration->database_password, [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
-));
-} catch (Exception $e) {
-  echo $e->getMessage();
+  ]);
+} catch (Throwable $error) {
+  echo $error->getMessage();
 }
 
 function sendEmail($to, $subject, $htmlBody, $textBody) {
