@@ -8,7 +8,7 @@
     <p>Yofi tofi? what's that? Just your every day Hebrew expression for "great, excellent!", "ha, that's cool!", or "okie dokie!"</p>
   </div>
   <div>
-    <img src="/images/sweetpotatoes.jpg">
+    <img src="/images/sweetpotatoes.jpg" alt="sweet potatoes">
   </div>
   <div>
     <p>(Aw man, those are some pretty yofi sweet potatoes!)</p>

@@ -5,7 +5,7 @@
     <h2>the contact page</h2>
   </div>
   <div>
-    <img src="/images/telephone.jpg">
+    <img src="/images/telephone.jpg" alt="telephone">
   </div>
 </section>
 
