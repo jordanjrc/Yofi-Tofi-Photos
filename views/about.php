@@ -1,4 +1,4 @@
-<section class="color-block-blue center-it"></section>
+<section class="color-block-blue"></section>
 
 <section id="about-section">
   <div>
