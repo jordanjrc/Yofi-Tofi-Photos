@@ -3,7 +3,7 @@
 <section class="color-block-orange"></section>
 
 <div id="dashboard-header">
-  <h2>Welcome, <?= ucfirst($results->first_name) ?>!<h2>
+  <h2>Welcome, <?= ucfirst($user->first_name) ?>!<h2>
 </div>
 
 <section id="dashboard-tabs">

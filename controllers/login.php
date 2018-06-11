@@ -7,15 +7,14 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
   $email = strtolower($email);
   $password = $_POST['password'];
 
-  $query = $database->prepare("SELECT * FROM users WHERE lower(email) = :email");
-  $query->bindValue(':email', $email);
-  $query->execute();
+  $getUser = $database->prepare("SELECT * FROM users WHERE lower(email) = :email");
+  $getUser->bindValue(':email', $email);
+  $getUser->execute();
+  $user = $getUser->fetch();
 
-  $results = $query->fetch();
-
-  if (!empty($results)) {
-    if (password_verify($password, $results->password)) {
-      $_SESSION['user_id'] = $results->id;
+  if (!empty($user)) {
+    if (password_verify($password, $user->password)) {
+      $_SESSION['user_id'] = $user->id;
       header('Location: /user/dashboard');
     } else {
       $passwordErrorMessage = 'incorrect password';
