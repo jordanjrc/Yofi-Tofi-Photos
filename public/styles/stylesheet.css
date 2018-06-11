@@ -1,0 +1,409 @@
+body {
+  margin: 0;
+  color: #1c1c1c;
+  font-family: 'Muli', sans-serif;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+}
+
+li a, h1 a, h2 a  {
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+li a:hover, h2 a:hover  {
+  border-bottom: 2px solid #c4d8c3;
+}
+
+#current-link {
+  border-bottom: 2px solid #c4d8c3;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 60px;
+}
+
+#home-navbar {
+  text-align: center;
+  flex-direction: column;
+  padding: 16px 16px 8px 16px;
+}
+
+#navbar ul, #home-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar ul li, #home-navbar ul li {
+  display: inline-block;
+}
+
+#home-navbar ul li {
+  padding: 10px 10px 0 10px;
+}
+
+#navbar ul li {
+  margin-right: 32px;
+}
+
+#navbar ul li a, #home-navbar ul li a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+#navbar h1, #home-navbar h1 {
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  font-size: 50px;
+}
+
+#navbar h1, #home-navbar h1 {
+  flex-grow: 1;
+}
+
+#navbar h1 {
+  margin: 0 32px 0 0;
+}
+
+#home-navbar h1 {
+  margin: 0 0 10px 0;
+}
+
+/* home page */
+
+#splashpage-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#splashpage-welcome div {
+  padding: 10px;
+}
+
+#splashpage-welcome h2 {
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  font-size: 60px;
+}
+
+#splashpage-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#splashpage-section img {
+  max-width: 100%;
+  max-height: 580px;
+}
+
+#splashpage-section h2 {
+  text-align: center;
+}
+
+/* about page */
+
+#about-header-photo div {
+  background-image: url('/images/yellow_flowers.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: cover;
+  height: 330px;
+  width: 100%;
+}
+
+
+#about-section div {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+#about-section div h2 {
+  margin: 0;
+}
+
+#about-section div img {
+  max-height: 300px;
+  max-width: 450px;
+  width: 100%;
+}
+
+#about-section div p {
+  text-align: center;
+}
+
+/* photos page */
+
+#gallery img {
+  width: 600px;
+}
+
+#photos-header-photo {
+  padding-top: 15px;
+}
+
+#photos-header-photo {
+  background-image: url('/images/cool_dog.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: cover;
+  height: 430px;
+  width: 100%;
+}
+
+#photos-header h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+#photo-collage {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+#photo-collage img {
+  height: 260px;
+  width: 400px;
+}
+
+@media (max-width: 400px) {
+  #photos-header-photo div {
+    height: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  #photos-header-photo div {
+    height: 200px;
+  }
+}
+
+/* contact page */
+
+#contact-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-section div {
+  width: 300px;
+  text-align: center;
+}
+
+#contact-section img {
+  max-height: 277px;
+}
+
+/* dashboard */
+
+#dashboard-header-photo {
+  background-image: url('/images/pineapple-photos.jpeg');
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  padding-top: 15px;
+}
+
+#dashboard-header h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#dashboard-tabs {
+  height: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#dashboard-tabs div {
+  width: 25%;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  #dashboard-header-photo div {
+    height: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  #dashboard-header-photo div {
+    height: 200px;
+  }
+}
+
+/* error page */
+
+#error-message-section {
+  text-align: center;
+}
+
+/* login and sign up stuffssss */
+
+#sign-up-form {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 8px;
+}
+
+form {
+  text-align: left;
+  width: 100%;
+}
+
+form div {
+  padding: 8px 0;
+}
+
+form div input {
+  display: block;
+  height: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #bababa;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button button {
+  background-color: #8cba64;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: lighter;
+  color: white;
+  padding: 8px 0;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#button button:hover, #forgot-password:hover {
+  opacity: 0.8;
+}
+
+#reset-password-error-message {
+  text-align: center;
+}
+
+#first-last-name {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#first-last-name input {
+  width: 155px;
+}
+
+#error-message {
+  font-size: 12px;
+  color: red;
+}
+
+#forgot-password {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.color-block-light-green, .color-block-blue, .color-block-purple, .color-block-orange, .color-block-rose {
+  min-height: 30px;
+  opacity: 0.5;
+}
+
+.color-block-light-green {
+  background-color: #c4d8c3;
+}
+
+.color-block-blue {
+  background-color: #bcd3d2;
+}
+
+.color-block-purple {
+  background-color: #a9a0ba;
+}
+
+.color-block-orange {
+  background-color: #efd8a5;
+}
+
+.color-block-rose {
+  background-color: #e5c9d5;
+}
+
+@media (max-width: 850px) {
+  #navbar {
+    text-align: center;
+    flex-direction: column;
+    padding: 16px 16px 8px 16px;
+  }
+
+  #navbar ul li, #navbar ul li:last-child {
+    margin: 0 8px 8px 8px;
+  }
+
+  #navbar h1 {
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 530px) {
+  #splashpage-welcome {
+    flex-direction: column-reverse;
+    padding-top: 10px;
+
+  }
+  #splashpage-welcome div {
+    padding: 0;
+    margin: 0;
+  }
+  #splashpage-welcome h2 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  #sign-up-form {
+    padding: 15px;
+  }
+
+  #first-last-name {
+    display: block;
+  }
+
+  #first-last-name input {
+    width: 100%;
+  }
+}
+
+

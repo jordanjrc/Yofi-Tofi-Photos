@@ -1,0 +1,21 @@
+server {
+  server_name yofitofi.kellpro.com yofitofi.kellpro.test;
+  listen 80;
+  listen 8090;
+  root /var/www/yofi;
+
+  set $public 0;
+  if (-f $document_root/public$uri) {
+    set $public 1;
+    rewrite (.*) /public$1;
+  }
+
+  if ($public = 0) {
+    rewrite (.*) /index.php;
+  }
+
+  location ~ \.php$ {
+    include fastcgi.conf;
+    fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+  }
+}
