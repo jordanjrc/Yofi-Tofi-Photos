@@ -11,7 +11,7 @@
 
   <body>
     <nav id="navbar">
-      <h1><a href="\">Yofi Tofi</a></h1>
+      <h1><a href="/">Yofi Tofi</a></h1>
       <ul>
         <li>
           <a href="/home" id="<?= ($resquestedPage === "home" ? "current-link" : " ") ?>">Home</a>

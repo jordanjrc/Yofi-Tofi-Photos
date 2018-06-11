@@ -36,7 +36,7 @@ if (file_exists($controller)) {
 }
 
 if (file_exists($view)) {
-  include('includes/_header.php');
+  include('includes/header.php');
   include($view);
-  include('includes/_footer.php');
+  include('includes/footer.php');
 }
