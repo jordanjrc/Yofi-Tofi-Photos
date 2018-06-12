@@ -1,16 +1,9 @@
-<section class="color-block-blue"></section>
+<section class="color-block-rose"></section>
 
-<section id="about-section">
+<section id="about-background-image">
   <div>
     <h2>The About Page</h2>
-  </div>
-  <div>
-    <p>Yofi tofi? what's that? Just your every day Hebrew expression for "great, excellent!", "ha, that's cool!", or "okie dokie!"</p>
-  </div>
-  <div>
-    <img src="/images/sweetpotatoes.jpg" alt="sweet potatoes">
-  </div>
-  <div>
-    <p>(Aw man, those are some pretty yofi sweet potatoes!)</p>
+    <p>Yofi Tofi is a cool place to see some cool photos! From pics of your dog to your neighbor's cactus, there are all sorts of yofi photos to see!</p>
+    <p>Wait, yofi tofi? What's that? Just your every day Hebrew expression for "great, excellent!", "ha, that's cool!", or "okie dokie!"</p>
   </div>
 </section>

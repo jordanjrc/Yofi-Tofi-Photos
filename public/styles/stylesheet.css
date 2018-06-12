@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   color: #1c1c1c;
@@ -8,6 +12,7 @@ h2 {
   font-family: 'Oswald', sans-serif;
   letter-spacing: 1.5px;
   font-weight: normal;
+  font-size: 28px;
 }
 
 li a, h1 a, h2 a  {
@@ -90,33 +95,28 @@ li a:hover, h2 a:hover  {
 
 /* about page */
 
-#about-header-photo div {
-  background-image: url('/images/yellow_flowers.jpeg');
+#about-background-image {
+  background-image: url('/images/flowers.jpeg');
   background-repeat: no-repeat;
-  background-position: 50% 55%;
+  background-position: 50% 25%;
   background-size: cover;
-  height: 330px;
+  text-align: center;
+  height: 100%;
   width: 100%;
 }
 
-#about-section div {
-  display: flex;
-  justify-content: center;
-  margin: 5px 0;
+#about-background-image div {
+  background-color: rgb(255, 255, 255, 0.7);
+  height: 100%;
 }
 
-#about-section div h2 {
+#about-background-image h2 {
+  padding-top: 20px;
   margin: 0;
 }
 
-#about-section div img {
-  max-height: 300px;
-  max-width: 450px;
-  width: 100%;
-}
-
-#about-section div p {
-  text-align: center;
+#about-background-image p {
+  padding: 0 20px;
 }
 
 /* photos page */
