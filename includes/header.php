@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="/styles/stylesheet.css">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body>
