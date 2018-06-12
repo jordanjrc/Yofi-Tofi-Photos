@@ -1,4 +1,4 @@
-<section class="color-block-purple"></section>
+<section class="color-block-blue"></section>
 
 <section id="contact-section">
   <div>

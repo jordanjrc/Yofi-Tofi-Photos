@@ -1,6 +1,6 @@
 <section id="dashboard-header-photo"></section>
 
-<section class="color-block-orange"></section>
+<section class="color-block-yellow"></section>
 
 <div id="dashboard-header">
   <h2>Welcome, <?= ucfirst($user->first_name) ?>!<h2>

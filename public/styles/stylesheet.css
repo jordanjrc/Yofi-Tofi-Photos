@@ -80,7 +80,6 @@ li a:hover, h2 a:hover  {
 
 #splashpage-section {
   display: flex;
-  justify-content: center;
   width: 100%;
 }
 
@@ -91,6 +90,29 @@ li a:hover, h2 a:hover  {
 
 #splashpage-section h2 {
   text-align: center;
+}
+
+@media (max-width: 760px) {
+  #splashpage-section {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 530px) {
+  #splashpage-welcome {
+    flex-direction: column-reverse;
+    padding-top: 10px;
+  }
+
+  #splashpage-welcome div {
+    padding: 0;
+    margin: 0;
+  }
+
+  #splashpage-welcome h2 {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /* about page */
@@ -170,14 +192,13 @@ li a:hover, h2 a:hover  {
 
 #contact-section {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #contact-section div {
-  width: 300px;
-  text-align: center;
+  padding: 20px;
 }
 
 #contact-section img {
@@ -310,24 +331,20 @@ form div input {
   text-decoration: none;
 }
 
-.color-block-light-green, .color-block-blue, .color-block-purple, .color-block-orange, .color-block-rose {
+.color-block-green, .color-block-blue, .color-block-yellow, .color-block-rose {
   min-height: 30px;
   opacity: 0.5;
 }
 
-.color-block-light-green {
+.color-block-green {
   background-color: #c4d8c3;
 }
 
 .color-block-blue {
-  background-color: #bcd3d2;
+  background-color: #9ed1d1;
 }
 
-.color-block-purple {
-  background-color: #a9a0ba;
-}
-
-.color-block-orange {
+.color-block-yellow {
   background-color: #efd8a5;
 }
 
@@ -335,7 +352,7 @@ form div input {
   background-color: #e5c9d5;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 860px) {
   #navbar {
     text-align: center;
     flex-direction: column;
@@ -349,22 +366,6 @@ form div input {
   #navbar h1 {
     margin-bottom: 16px;
     margin-right: 0;
-  }
-}
-
-@media (max-width: 530px) {
-  #splashpage-welcome {
-    flex-direction: column-reverse;
-    padding-top: 10px;
-
-  }
-  #splashpage-welcome div {
-    padding: 0;
-    margin: 0;
-  }
-  #splashpage-welcome h2 {
-    padding: 0;
-    margin: 0;
   }
 }
 

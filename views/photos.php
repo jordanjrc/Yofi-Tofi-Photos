@@ -4,7 +4,7 @@
   <h2>The Photo Gallery</h2>
 </div>
 
-<section class="color-block-light-green"></section>
+<section class="color-block-green"></section>
 
 <section id="photo-collage">
   <div>

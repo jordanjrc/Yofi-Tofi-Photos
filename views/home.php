@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<section class="color-block-orange"></section>
+<section class="color-block-yellow"></section>
 
 <section id="splashpage-section">
   <div>
