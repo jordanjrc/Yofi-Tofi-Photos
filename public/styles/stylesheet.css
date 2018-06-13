@@ -69,12 +69,13 @@ li a:hover, h2 a:hover  {
 }
 
 #splashpage-welcome div {
-  padding: 10px;
+  padding: 10px 0;
 }
 
 #splashpage-welcome h2 {
   font-family: 'Sacramento', cursive;
   font-weight: normal;
+  letter-spacing: 0;
   font-size: 60px;
 }
 
