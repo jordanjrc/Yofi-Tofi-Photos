@@ -191,21 +191,28 @@ li a:hover, h2 a:hover  {
 
 /* contact page */
 
-#contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+#contact-form {
+  background-image: url('/images/dark_road.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-#contact-section div {
-  padding: 20px;
+#contact-form form {
+  margin-top: 60px;
 }
 
-#contact-section img {
-  max-height: 277px;
-}
+@media (max-width: 680px) {
+  #contact-form {
+    height: 0;
+  }
 
+  #contact-form form {
+    margin-top: 0;
+  }
+}
 /* dashboard */
 
 #dashboard-header-photo {
@@ -255,67 +262,88 @@ li a:hover, h2 a:hover  {
 }
 
 /* login and sign up stuffssss */
+.standard-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 15px;
+}
 
-#sign-up-form {
+.standard-form form h2 {
   text-align: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 320px;
-  padding: 8px;
 }
 
-form {
-  text-align: left;
-  width: 100%;
+.standard-form form {
+  background-color: white;
+  height: 480px;
+  width: 600px;
+  padding: 0 20px;
+  margin-top: 15px;
 }
 
-form div {
+.standard-form form div {
   padding: 8px 0;
 }
 
-form div input {
+.standard-form form div input, .standard-form form div textarea {
+  background-color: #f3f3f3;
   display: block;
-  height: 20px;
+  height: 25px;
   width: 100%;
-  box-sizing: border-box;
   border: none;
-  border-bottom: 1px solid #bababa;
 }
 
-#button {
+.standard-form form div textarea {
+  height: 140px;
+  resize: none;
+}
+
+.standard-form form div input:focus {
+  outline-width: 0;
+}
+
+#submit-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#button button {
-  background-color: #8cba64;
+#submit-button button {
   font-size: 13px;
   letter-spacing: 1.5px;
   font-weight: lighter;
-  color: white;
+  border: 1px solid #bababa;
+  border-radius: 2px;
   padding: 8px 0;
   margin: 8px 0;
-  border: none;
   cursor: pointer;
-  width: 100%;
+  width: 200px;
 }
 
-#button button:hover, #forgot-password:hover {
+#submit-button button:hover, #forgot-password:hover {
   opacity: 0.8;
 }
 
-#reset-password-error-message {
-  text-align: center;
+#login-form form {
+  width: 360px;
 }
 
 #first-last-name {
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
 
-#first-last-name input {
-  width: 155px;
+#first-last-name div {
+  flex-grow: 1;
+}
+
+#first-last-name div:first-child {
+  padding-right: 15px;
+}
+
+#login-form-message div {
+  text-align: center;
+  padding: 40px 10px;
 }
 
 #error-message {
@@ -332,7 +360,7 @@ form div input {
   text-decoration: none;
 }
 
-.color-block-green, .color-block-blue, .color-block-yellow, .color-block-rose {
+.color-block-green, .color-block-blue, .color-block-purple, .color-block-yellow, .color-block-rose {
   min-height: 30px;
   opacity: 0.5;
 }
@@ -342,7 +370,11 @@ form div input {
 }
 
 .color-block-blue {
-  background-color: #9ed1d1;
+  background-color: #b3d1db;
+}
+
+.color-block-purple {
+  background-color: #c0b7d2;
 }
 
 .color-block-yellow {
@@ -383,5 +415,3 @@ form div input {
     width: 100%;
   }
 }
-
-

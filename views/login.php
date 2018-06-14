@@ -1,7 +1,8 @@
-<section id="sign-up-form">
-  <h2>Log in to your account</h2>
+<section class="color-block-blue"></section>
 
+<section class="standard-form" id="login-form">
   <form action="<?= $resquestedPage ?>" method="post">
+    <h2>Log in to your account</h2>
     <span id="error-message"><?= $errorMessage ?></span>
     <div>
       <label for="email">Email Address</label>
@@ -11,7 +12,7 @@
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
     </div>
-    <div id="button">
+    <div id="submit-button">
       <button type="submit">Login</button>
     </div>
     <div>
