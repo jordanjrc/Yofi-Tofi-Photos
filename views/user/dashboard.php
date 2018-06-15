@@ -2,15 +2,27 @@
 
 <section class="color-block-yellow"></section>
 
-<div id="dashboard-header">
-  <h2>Welcome, <?= ucfirst($user->first_name) ?>!<h2>
-</div>
+<section id="dashboard">
+  <div id="dashboard-tabs">
+    <ul>
+      <li>
+        <a href="">your photos</a>
+      </li>
+      <li>
+        <a href="/user/upload-photo">upload a photo</a>
+      </li>
+      <li>
+        <a href="">account settings</a>
+      </li>
+    </ul>
+  </div>
+  <div id="dashboard-body">
+    <? if (isset($_GET['photo-uploaded'])) { ?>
+      <p id="success-message"><i class="fas fa-check"></i> Your photo was successfully uploaded</p>
+    <? } ?>
+    <h2>Welcome, <?= ucfirst($user->first_name) ?>!</h2>
+    <p>this is your page!! yipppeeee!</p>
 
-<section id="dashboard-tabs">
-  <div>Your Account</div>
-  <div>Your Photos</div>
-  <div>Another Option</div>
-  <div>Annnnd Another!</div>
+  </div>
 </section>
-
 

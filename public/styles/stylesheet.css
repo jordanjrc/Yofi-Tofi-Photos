@@ -24,6 +24,12 @@ li a:hover, h2 a:hover  {
   border-bottom: 2px solid #c4d8c3;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 #current-link {
   border-bottom: 2px solid #c4d8c3;
 }
@@ -33,12 +39,6 @@ li a:hover, h2 a:hover  {
   align-items: center;
   justify-content: flex-end;
   padding: 10px 60px;
-}
-
-#navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 #navbar ul li {
@@ -213,6 +213,7 @@ li a:hover, h2 a:hover  {
     margin-top: 0;
   }
 }
+
 /* dashboard */
 
 #dashboard-header-photo {
@@ -230,17 +231,35 @@ li a:hover, h2 a:hover  {
   text-align: center;
 }
 
-#dashboard-tabs {
-  height: 300px;
+#dashboard {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
 }
 
-#dashboard-tabs div {
-  width: 25%;
-  text-align: center;
+#dashboard div {
+  padding: 30px;
+}
+
+#dashboard-tabs {
+  background-color: #f3f3f3;
+  width: 250px;
+}
+
+#dashboard-tabs ul li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+#dashboard h2 {
+  margin: 0;
+}
+
+#photo-upload-file {
+  background-color: transparent;
 }
 
 @media (max-width: 400px) {
@@ -349,6 +368,17 @@ li a:hover, h2 a:hover  {
 #error-message {
   font-size: 12px;
   color: red;
+}
+
+#success-message {
+  color: #217c15;
+  background-color: #daffb7;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#success-message i {
+  padding-right: 5px;
 }
 
 #forgot-password {
