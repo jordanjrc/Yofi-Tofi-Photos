@@ -238,13 +238,14 @@ ul {
   height: 100%;
 }
 
-#dashboard div {
+#dashboard section {
   padding: 30px;
 }
 
 #dashboard-tabs {
   background-color: #f3f3f3;
   width: 250px;
+  padding: 30px;
 }
 
 #dashboard-tabs ul li {
@@ -260,6 +261,24 @@ ul {
 
 #photo-upload-file {
   background-color: transparent;
+}
+
+#dashboard-photos {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 10px;
+}
+
+#dashboard-photos div {
+  padding-right: 10px;
+}
+
+#dashboard-photos p {
+  margin: 5px 0;
+}
+
+#dashboard-photos img {
+  height: 200px;
 }
 
 @media (max-width: 400px) {
