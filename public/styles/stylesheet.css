@@ -281,6 +281,29 @@ ul {
   height: 200px;
 }
 
+@media (max-width: 1000px) {
+  #dashboard {
+    flex-direction: column;
+  }
+
+  #dashboard-tabs {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px;
+  }
+
+  #dashboard-tabs ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 8px;
+  }
+
+  #dashboard-tabs ul li {
+    flex-grow: 1;
+  }
+}
+
 @media (max-width: 400px) {
   #dashboard-header-photo div {
     height: 300px;
