@@ -11,7 +11,7 @@
     <div id="image-card">
       <img id="photo-gallery-image<?= $photo->id ?>" src="/images/original/<?= $photo->filename ?>" alt="<?= $photo->title ?>">
       <p><?= $photo->title ?></p>
-      <p><?= $photo->username ?></p>
+      <p><a href="profile?user_id=<?= $photo->user_id?>">@<?= $photo->username ?></a></p>
     </div>
 
     <div id="imageModal" class="modal">

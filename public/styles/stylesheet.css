@@ -15,12 +15,12 @@ h2 {
   font-size: 28px;
 }
 
-li a, h1 a, h2 a  {
+li a, h1 a, h2 a {
   color: #1c1c1c;
   text-decoration: none;
 }
 
-li a:hover, h2 a:hover  {
+li a:hover, h2 a:hover {
   border-bottom: 2px solid #c4d8c3;
 }
 
@@ -185,13 +185,18 @@ ul {
   padding-top: 5px;
 }
 
+#image-card a {
+  color: #6a9ac1;
+  text-decoration: none;
+}
+
 #image-card img {
   border: 1px solid #ededed;
   height: 260px;
   width: 100%;
 }
 
-#image-card img:hover {
+#image-card img:hover, #image-card a:hover {
   opacity: 0.7;
 }
 
@@ -395,6 +400,27 @@ ul {
   #dashboard-header-photo div {
     height: 200px;
   }
+}
+
+/* profile page */
+
+#profile-header {
+  text-align: center;
+}
+
+#profile-header h2 {
+  margin: 10px;
+}
+
+#profile-photos {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 25px;
+}
+
+#profile-photos img {
+  height: 280px;
+  padding-right: 25px;
 }
 
 /* error page */
