@@ -4,3 +4,10 @@ $getPhotos->execute();
 
 $photos = $getPhotos->fetchAll();
 
+$getUsers = $database->prepare("SELECT distinct on (users.id) users.id, users.first_name, users.last_name, users.username, photos.filename, photos.title FROM users
+left JOIN photos on photos.user_id = users.id
+ORDER BY users.id DESC, upload_date DESC
+");
+$getUsers->execute();
+
+$users = $getUsers->fetchAll();

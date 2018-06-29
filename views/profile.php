@@ -9,7 +9,11 @@
 
 <div id="profile-header">
   <h2><?= $userFullName ?></h2>
-  <p>@<?= $user->username ?></p>
+  <p id="user-handle"><?= (!empty($user->username) ? '@' . $user->username : '') ?></p>
+  <? if (empty($photos)) { ?>
+    <p>No photos upload yet!</p>
+    <p>Return to the <a href="photos?users">user gallery</a>.</p>
+  <? } ?>
 </div>
 
 <div id="profile-photos">
