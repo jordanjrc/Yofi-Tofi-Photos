@@ -17,9 +17,6 @@
       <div id="submit-button">
         <button type="submit" name="submit">Upload</button>
       </div>
-      <div>
-        <a href="/user/dashboard" id="forgot-password">back to dashboard</a>
-      </div>
     </form>
   </section>
 </section>
