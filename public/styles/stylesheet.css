@@ -15,12 +15,21 @@ h2 {
   font-size: 28px;
 }
 
-li a, h1 a, h2 a {
+a {
+  color: #6a9ac1;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+#navbar li a, h1 a, h2 a {
   color: #1c1c1c;
   text-decoration: none;
 }
 
-li a:hover, h2 a:hover {
+#navbar li a:hover {
   border-bottom: 2px solid #c4d8c3;
 }
 
@@ -185,18 +194,13 @@ ul {
   padding-top: 5px;
 }
 
-#image-card a {
-  color: #6a9ac1;
-  text-decoration: none;
-}
-
 #image-card img {
   border: 1px solid #ededed;
   height: 260px;
   width: 100%;
 }
 
-#image-card img:hover, #image-card a:hover {
+#image-card img:hover {
   opacity: 0.7;
 }
 
@@ -535,8 +539,6 @@ ul {
   text-align: center;
   width: 100%;
   font-size: 15px;
-  color: black;
-  text-decoration: none;
 }
 
 .color-block-green, .color-block-blue, .color-block-purple, .color-block-yellow, .color-block-rose {
