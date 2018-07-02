@@ -1,10 +1,8 @@
-<section id="photos-header-photo"></section>
-
 <section class="color-block-green"></section>
 
 <div id="photos-header">
-  <h2>The Photo Gallery</h2>
   <nav>
+    <h2>The Photo Gallery</h2>
     <ul>
       <li><a href="/photos" id="<?= ($_SERVER['REQUEST_URI'] === "/photos" ? "current-link" : " ") ?>">all photos</a></li>
       <li><a href="/photos?users" id="<?= ($_SERVER['REQUEST_URI'] === "/photos?users" ? "current-link" : " ") ?>">all users</a></li>

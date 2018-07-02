@@ -153,31 +153,21 @@ ul {
 
 /* photos page */
 
-#photos-header-photo {
-  padding-top: 15px;
-}
-
-#photos-header-photo {
-  background-image: url('/images/cool_dog.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 55%;
-  background-size: cover;
-  height: 430px;
-  width: 100%;
-}
-
 #photos-header nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
 
 #photos-header h2 {
-  padding: 5px;
+  padding: 15px;
   margin: 0;
-  font-size: 25px;
-  text-align: center;
+}
+
+#photos-header ul {
+  padding-top: 5px;
 }
 
 #photos-header ul li {
