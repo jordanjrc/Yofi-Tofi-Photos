@@ -152,13 +152,29 @@ ul {
 }
 
 /* photos page */
+#photos-header-photo {
+  padding-top: 15px;
+}
+
+#photos-header-photo {
+  background-image: url('/images/cool_dog.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: cover;
+  height: 330px;
+  width: 100%;
+}
+
+#photos-header-photo h2 {
+  color: white;
+}
 
 #photos-header nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
+  justify-content: flex-start;
+  padding: 10px 60px;
 }
 
 #photos-header h2 {
@@ -206,7 +222,7 @@ ul {
 #photo-gallery {
   display: flex;
   flex-flow: row wrap;
-  width: 95%;
+  padding: 0 60px;
   margin: 0 auto;
 }
 
