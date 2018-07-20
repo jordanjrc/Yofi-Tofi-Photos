@@ -28,6 +28,8 @@ if (isset($_POST['submit'])) {
     if (!$errorMessage) {
       $photoTitle = trim($_POST['photo-upload-title']);
       $photoTitle = strtolower($photoTitle);
+      $photoTitle = htmlspecialchars($photoTitle);
+      
       $originalFilename = $_FILES['photo-upload-file']['name'];
 
       move_uploaded_file($_FILES['photo-upload-file']['tmp_name'], $originalLocation);
