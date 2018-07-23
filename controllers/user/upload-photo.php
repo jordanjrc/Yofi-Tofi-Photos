@@ -1,4 +1,6 @@
 <?php
+require_once('classes/imageManipulator.php');
+
 $errorMessage = null;
 
 if (isset($_POST['submit'])) {
@@ -13,9 +15,6 @@ if (isset($_POST['submit'])) {
     ];
 
     $imageType = mime_content_type($_FILES['photo-upload-file']['tmp_name']);
-    $uploadFile = bin2hex(random_bytes(16)) . '.' . pathinfo($_FILES['photo-upload-file']['name'], PATHINFO_EXTENSION);
-    $originalLocation = 'public/images/original/' . $uploadFile;
-
 
     if (!in_array($imageType, $supportedFileTypes)) {
       $errorMessage = 'Please upload a JPG, PNG, or GIF.';
@@ -26,11 +25,19 @@ if (isset($_POST['submit'])) {
     }
 
     if (!$errorMessage) {
+      $originalFilename = $_FILES['photo-upload-file']['name'];
+      $uploadFile = bin2hex(random_bytes(16)) . '.' . pathinfo($_FILES['photo-upload-file']['name'], PATHINFO_EXTENSION);
+
+      $originalLocation = 'public/images/original/' . $uploadFile;
+      $resizedLocation = 'public/images/resized/' . $uploadFile;
+
       $photoTitle = trim($_POST['photo-upload-title']);
       $photoTitle = strtolower($photoTitle);
       $photoTitle = htmlspecialchars($photoTitle);
-      
-      $originalFilename = $_FILES['photo-upload-file']['name'];
+
+      $manipulator = new ImageManipulator($_FILES['photo-upload-file']['tmp_name']);
+      $resized = $manipulator->resample(450, 260);
+      $manipulator->save($resizedLocation);
 
       move_uploaded_file($_FILES['photo-upload-file']['tmp_name'], $originalLocation);
 
