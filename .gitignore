@@ -2,3 +2,4 @@
 configuration.json
 vendor/
 public/images/original
+public/images/resized
