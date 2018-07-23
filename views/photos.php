@@ -18,7 +18,7 @@
       <? foreach ($users as $user) { ?>
       <a href="photos?user_id=<?= $user->id ?>">
         <div>
-          <img src="/images/<?= (!empty($user->filename) ? 'original/' . $user->filename : 'happy-coffee.jpg' ) ?>" alt="<?= $user->title ?>">
+          <img src="/images/<?= (!empty($user->filename) ? 'resized/' . $user->filename : 'happy-coffee.jpg' ) ?>" alt="<?= $user->title ?>">
           <p><?= $user->first_name . ' ' . $user->last_name ?></p>
           <p id="user-handle"><?= (!empty($user->username) ? '@' . $user->username : '') ?></p>
         </div>
@@ -40,9 +40,11 @@
   <div id="photo-gallery">
   <? foreach ($photos as $photo) { ?>
     <div id="image-card">
-      <img id="photo-gallery-image<?= $photo->id ?>" src="/images/original/<?= $photo->filename ?>" alt="<?= $photo->title ?>">
-      <p><?= $photo->title ?></p>
-      <p><a href="photos?user_id=<?= $photo->user_id?>">@<?= $photo->username ?></a></p>
+      <div>
+        <img id="photo-gallery-image<?= $photo->id ?>" src="/images/resized/<?= $photo->filename ?>" alt="<?= $photo->title ?>">
+        <p><?= $photo->title ?></p>
+        <p><a href="photos?user_id=<?= $photo->user_id?>">@<?= $photo->username ?></a></p>
+      </div>
     </div>
 
     <div id="imageModal" class="modal">
@@ -61,8 +63,9 @@
     var captionText = document.getElementById('caption');
 
     image.onclick = function() {
+      var filename = this.src.replace(/^.*[\\\/]/, '');
       modal.style.display = "block";
-      modalImage.src = this.src;
+      modalImage.src = '/images/original/' + filename;
       captionText.innerHTML = this.alt;
     }
 

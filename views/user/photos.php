@@ -7,7 +7,7 @@
     <div id="dashboard-photos">
       <? foreach ($photos as $photo) { ?>
         <div>
-          <img src="/images/original/<?= $photo->filename ?>" alt="<?= $photo->title ?>">
+          <img src="/images/resized/<?= $photo->filename ?>" alt="<?= $photo->title ?>">
           <p><?= $photo->title ?></p>
         </div>
       <? } ?>
