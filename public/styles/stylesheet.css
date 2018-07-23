@@ -460,31 +460,6 @@ ul {
   }
 }
 
-/* profile page */
-
-#profile-header {
-  text-align: center;
-}
-
-#profile-header h2 {
-  margin: 10px;
-}
-
-#profile-header #user-handle {
-  margin: 5px 0;
-}
-
-#profile-photos {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 10px 25px;
-}
-
-#profile-photos img {
-  height: 280px;
-  padding-right: 25px;
-}
-
 /* error page */
 
 #error-message-section {
