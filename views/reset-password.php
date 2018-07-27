@@ -11,7 +11,7 @@
 <? } else { ?>
 
   <section class="standard-form" id="login-form">
-    <form action="<?= $resquestedPage ?>" method="post">
+    <form action="<?= $requestedPage ?>" method="post">
       <h2>Reset your password</h2>
       <div>
         <label for="password">New Password</label>

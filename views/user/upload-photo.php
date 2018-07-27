@@ -3,7 +3,7 @@
 <section id="dashboard">
 <? include('includes/dashboard-side.php'); ?>
   <section class="standard-form" id="login-form">
-    <form action="/<?= $resquestedPage ?>" method="post" enctype="multipart/form-data">
+    <form action="/<?= $requestedPage ?>" method="post" enctype="multipart/form-data">
       <h2>Upload a Photo</h2>
       <span id="error-message"><?= $errorMessage ?></span>
       <div>

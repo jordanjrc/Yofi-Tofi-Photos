@@ -1,7 +1,7 @@
 <section class="color-block-blue"></section>
 
 <section class="standard-form" id="login-form">
-  <form action="<?= $resquestedPage ?>" method="post">
+  <form action="<?= $requestedPage ?>" method="post">
     <h2>Sign up</h2>
     <div>
       <label for="email">Email Address</label>

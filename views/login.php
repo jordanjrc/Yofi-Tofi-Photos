@@ -1,7 +1,7 @@
 <section class="color-block-blue"></section>
 
 <section class="standard-form" id="login-form">
-  <form action="<?= $resquestedPage ?>" method="post">
+  <form action="<?= $requestedPage ?>" method="post">
     <h2>Log in to your account</h2>
     <span id="error-message"><?= $errorMessage ?></span>
     <div>

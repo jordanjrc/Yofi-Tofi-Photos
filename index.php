@@ -2,25 +2,25 @@
 session_start();
 require('configuration.php');
 
-$resquestedPage = trim($_SERVER['REQUEST_URI'], '/');
-$resquestedPage = strtok($resquestedPage, '?');
+$requestedPage = trim($_SERVER['REQUEST_URI'], '/');
+$requestedPage = strtok($requestedPage, '?');
 
-if (!$resquestedPage) {
-    $resquestedPage = 'home';
+if (!$requestedPage) {
+    $requestedPage = 'home';
 }
 
-$pageTitle = basename($resquestedPage);
+$pageTitle = basename($requestedPage);
 $pageTitle = str_replace("-", " ", $pageTitle);
 $pageTitle = ucwords($pageTitle);
 
-$view = 'views/' . $resquestedPage . '.php';
-$controller = 'controllers/' . $resquestedPage . '.php';
+$view = 'views/' . $requestedPage . '.php';
+$controller = 'controllers/' . $requestedPage . '.php';
 $errorPage = 'views/error.php';
 
 $referer = @$_SERVER['HTTP_REFERER'];
 $previousLocation = parse_url($referer, PHP_URL_PATH);
 
-if (preg_match('/^user/', $resquestedPage)) {
+if (preg_match('/^user/', $requestedPage)) {
   if (!isset($_SESSION['user_id'])) {
     header('Location: /login');
   }

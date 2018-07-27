@@ -1,7 +1,7 @@
 <section class="color-block-purple"></section>
 
 <section class="standard-form" id="contact-form">
-  <form action="<?= $resquestedPage ?>" method="post">
+  <form action="<?= $requestedPage ?>" method="post">
     <h2>Contact Us</h2>
     <div>
       <label for="name">Name</label>
