@@ -215,6 +215,10 @@ ul {
   margin: 5px 0;
 }
 
+#user-header {
+  text-align: center;
+}
+
 #user-handle {
   font-size: 14px;
 }

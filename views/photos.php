@@ -27,7 +27,7 @@
     </div>
 <? } else { ?>
 <? if (isset($_GET['user_id'])) { ?>
-  <div id="profile-header">
+  <div id="user-header">
     <h2><?= $userInfo->first_name . ' ' . $userInfo->last_name ?></h2>
     <p id="user-handle"><?= (!empty($userInfo->username) ? '@' . $userInfo->username : '') ?></p>
     <? if (empty($photos)) { ?>
@@ -43,7 +43,7 @@
       <div>
         <img id="photo-gallery-image<?= $photo->id ?>" src="/images/resized/<?= $photo->filename ?>" alt="<?= $photo->title ?>">
         <p><?= $photo->title ?></p>
-        <p><a href="photos?user_id=<?= $photo->user_id?>">@<?= $photo->username ?></a></p>
+        <p><a href="photos?user_id=<?= $photo->user_id?>"><?= (!empty($photo->username) ? '@' . $photo->username : $photo->first_name . ' ' . $photo->last_name) ?></a></p>
       </div>
     </div>
 
