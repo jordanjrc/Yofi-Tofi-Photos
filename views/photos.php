@@ -25,6 +25,14 @@
       </a>
     <? } ?>
     </div>
+    <div id="paginator">
+    <? if ($page > 1) { ?>
+        <a href="photos?users&page=<?= $page - 1 ?>"><i class="fas fa-angle-left"></i> previous page</a>
+    <? } ?>
+    <? if ($page < $lastPage) { ?>
+        <a href="photos?users&page=<?= $page + 1 ?>">next page <i class="fas fa-angle-right"></i></a>
+    <? } ?>
+    </div>
 <? } else { ?>
 <? if (isset($_GET['user_id'])) { ?>
   <div id="user-header">
@@ -75,12 +83,20 @@
       modal.style.display = "none";
     }
     </script>
-
   <? } ?>
-  <div id="image-card" class="hidden"></div>
-  <div id="image-card" class="hidden"></div>
-  <div id="image-card" class="hidden"></div>
-  <div id="image-card" class="hidden"></div>
+  
+    <div id="image-card" class="hidden"></div>
+    <div id="image-card" class="hidden"></div>
+    <div id="image-card" class="hidden"></div>
+    <div id="image-card" class="hidden"></div>
+  </div>
+
+  <div id="paginator">
+  <? if ($page > 1) { ?>
+      <a href="photos?<?= (isset($_GET['user_id']) ? 'user_id=' . $userId . '&' : '') ?>page=<?= $page - 1 ?>"><i class="fas fa-angle-left"></i> previous page</a>
+  <? } ?>
+  <? if ($page < $lastPage) { ?>
+      <a href="photos?<?= (isset($_GET['user_id']) ? 'user_id=' . $userId . '&' : '') ?>page=<?= $page + 1 ?>">next page <i class="fas fa-angle-right"></i></a>
+  <? } ?>
   </div>
 <? } ?>
-
