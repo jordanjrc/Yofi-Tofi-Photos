@@ -474,6 +474,25 @@ ul {
   }
 }
 
+#account-settings h2 {
+  padding-bottom: 10px;
+}
+
+
+.account-content-edit input {
+  padding: 6px 0;
+  margin: 10px 0;
+  width: 260px;
+}
+
+.account-content-edit {
+  display: inline;
+}
+
+.account-content-edit label {
+  display: block;
+}
+
 /* error page */
 
 #error-message-section {

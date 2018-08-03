@@ -11,7 +11,7 @@
         <a href="/user/upload-photo" id="<?= ($requestedPage === "user/upload-photo" ? "current-link" : " ") ?>">upload a photo</a>
       </li>
       <li>
-        <a href="">account settings</a>
+        <a href="/user/account" id="<?= ($requestedPage === "user/account" ? "current-link" : " ") ?>">account settings</a>
       </li>
     </ul>
   </nav>
