@@ -20,7 +20,7 @@ try {
   echo $error->getMessage();
 }
 
-function sendEmail($to, $subject, $htmlBody, $textBody) {
+function sendEmail($to, $from, $subject, $htmlBody, $textBody) {
   global $configuration;
 
   $mail = new PHPMailer;
@@ -35,6 +35,7 @@ function sendEmail($to, $subject, $htmlBody, $textBody) {
 
   $mail->setFrom($configuration->email_username, 'Yofi Tofi');
   $mail->addAddress($to);
+  $mail->addReplyTo($from);
   $mail->isHTML(true);
   $mail->Subject = $subject;
   $mail->Body = $htmlBody;

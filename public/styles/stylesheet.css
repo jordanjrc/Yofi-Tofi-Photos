@@ -352,8 +352,27 @@ ul {
   width: 100%;
 }
 
-#contact-form form {
+#contact-form form, #contact-form-message {
   margin-top: 60px;
+}
+
+#contact-form form div {
+  padding: 5px 0;
+}
+
+#contact-form form div p {
+  margin: 0;
+}
+
+#contact-form-message {
+  background-color: white;
+  height: 90px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#contact-form-message img {
+  height: 30px;
 }
 
 @media (max-width: 680px) {

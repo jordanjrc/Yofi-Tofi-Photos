@@ -21,10 +21,10 @@ if (!empty($_POST['email'])) {
     $name = $user->first_name;
     $resetLink = 'http://' . $_SERVER['HTTP_HOST'] . '/reset-password?token=' . $token;
     $subject = 'Password Reset Request';
-    $htmlBody = 'Hi ' . $name . '! We received a password reset request from your Yofi Tofi account. Please use this link to reset you password: <a href="' . $resetLink . '">' . $resetLink . '<a/>';
+    $htmlBody = 'Hi ' . ucwords($name) . '! We received a password reset request from your Yofi Tofi account. Please use this link to reset you password: <a href="' . $resetLink . '">' . $resetLink . '<a/>';
     $textBody = strip_tags($htmlBody);
 
-    sendEmail($email, $subject, $htmlBody, $textBody);
+    sendEmail($email, $configuration->email_username, $subject, $htmlBody, $textBody);
 
     header('Location: /forgot-password?success=1');
     exit;
