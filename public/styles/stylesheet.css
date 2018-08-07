@@ -450,12 +450,34 @@ ul {
   padding-bottom: 10px;
 }
 
+#dashboard-photos div div {
+  width: 100%;
+}
+
 #dashboard-photos p {
   margin: 5px 0;
 }
 
+#dashboard-photos input {
+  box-sizing: border-box;
+  display: block;
+  color: #1c1c1c;
+  border: 1px solid #bababa;
+  margin: 5px 0;
+  height: 20px;
+  width: 100%;
+  font-size: 15px;
+}
+
 #dashboard-photos img {
   height: 200px;
+}
+
+#dashboard-photos button {
+  border: 1px solid #bababa;
+  background-color: white;
+  border-radius: 2px;
+  padding: 5px;
 }
 
 @media (max-width: 1000px) {
