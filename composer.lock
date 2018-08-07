@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "8a761c968dc39fb9343ef3e751f601b5",
     "content-hash": "b296f5c4352ae27974bb45291a71c9bd",
     "packages": [
         {
@@ -68,7 +69,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-08-28T11:42:41+00:00"
+            "time": "2017-08-28 11:42:41"
         }
     ],
     "packages-dev": [],
